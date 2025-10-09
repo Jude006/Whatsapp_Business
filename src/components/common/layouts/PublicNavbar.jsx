@@ -28,7 +28,7 @@ const PublicNavbar = () => {
               Home
             </Link>
             <Link 
-              to="/features" 
+              to="/demo" 
               className="font-medium text-gray-600 transition-colors duration-200 hover:text-primary-500"
             >
               Features
@@ -94,7 +94,7 @@ const PublicNavbar = () => {
                 Home
               </Link>
               <Link 
-                to="/features" 
+                to="/demo" 
                 className="font-medium text-gray-600 transition-colors duration-200 hover:text-primary-500"
                 onClick={() => setIsMenuOpen(false)}
               >

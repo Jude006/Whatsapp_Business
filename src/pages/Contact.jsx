@@ -1,10 +1,15 @@
 import React from 'react'
+import ContactBanner from '../components/banner/ContactBanner'
+import FAQSection from '../components/contact/FAQSection'
+import LocationSection from '../components/contact/LocationSection'
 
 const Contact = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <ContactBanner />
+      <FAQSection />
+      <LocationSection />
+    </>
   )
 }
 

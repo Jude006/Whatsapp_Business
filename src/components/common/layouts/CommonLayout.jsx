@@ -1,16 +1,19 @@
 import React from 'react'
 import PublicNavbar from './PublicNavbar'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import Footer from './Footer'
 
 const CommonLayout = () => {
+  const location = useLocation()
+  const hideNavbar = ['/auth/login', '/auth/register']
+  const shouldHideNavbar = hideNavbar.some(route => location.pathname.startsWith(route))
   return (
     <>
-    <PublicNavbar />
+   {!shouldHideNavbar && <PublicNavbar />}
     <main>
         <Outlet />
     </main>
-    <Footer /> 
+  {!shouldHideNavbar &&  <Footer /> }
     </>
   )
 }
